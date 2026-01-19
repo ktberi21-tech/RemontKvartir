@@ -309,27 +309,44 @@ initializeMobileMenu();
 
 // Для отладки
 console.log('Landing page loaded successfully', CONFIG);
-// Bathroom Carousel
-document.addEventListener('DOMContentLoaded', function() {
+// Bathroom Carousel - инициализация сразу и при загрузке
+function initCarousel() {
     const carousel = document.querySelector('.bathroom-carousel');
     if (!carousel) return;
     
     let currentIndex = 0;
     const images = carousel.querySelectorAll('.carousel-img');
+    if (images.length === 0) return;
     
     function showImage(index) {
         images.forEach(img => img.classList.add('hidden'));
         images[index].classList.remove('hidden');
     }
     
-    carousel.querySelector('.carousel-prev').addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        showImage(currentIndex);
-    });
+    const prevBtn = carousel.querySelector('.carousel-prev');
+    const nextBtn = carousel.querySelector('.carousel-next');
     
-    carousel.querySelector('.carousel-next').addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % images.length;
-        showImage(currentIndex);
-    });
-});
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        });
+    }
+    
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        });
+    }
+}
+
+// Инициализируем при загрузке и сразу если DOM уже готов
+document.addEventListener('DOMContentLoaded', initCarousel);
+if (document.readyState === 'loading') {
+    // DOM еще загружается
+} else {
+    // DOM уже готов
+    initCarousel();
+}
 
