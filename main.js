@@ -323,6 +323,9 @@ function initCarousel() {
         images[index].classList.remove('hidden');
     }
     
+    // Показываем первое изображение при загрузке
+    showImage(0);
+    
     const prevBtn = carousel.querySelector('.carousel-prev');
     const nextBtn = carousel.querySelector('.carousel-next');
     
