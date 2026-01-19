@@ -309,3 +309,27 @@ initializeMobileMenu();
 
 // Для отладки
 console.log('Landing page loaded successfully', CONFIG);
+// Bathroom Carousel
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.querySelector('.bathroom-carousel');
+    if (!carousel) return;
+    
+    let currentIndex = 0;
+    const images = carousel.querySelectorAll('.carousel-img');
+    
+    function showImage(index) {
+        images.forEach(img => img.classList.add('hidden'));
+        images[index].classList.remove('hidden');
+    }
+    
+    carousel.querySelector('.carousel-prev').addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    });
+    
+    carousel.querySelector('.carousel-next').addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    });
+});
+
