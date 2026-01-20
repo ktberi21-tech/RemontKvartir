@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ремонт квартир - Калькулятор</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: white; padding: 20px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+        .logo { font-size: 24px; font-weight: 700; color: #2180CD; }
+        .section-title { font-size: 36px; text-align: center; margin: 40px 0 20px; color: #134252; font-weight: 700; }
+        .section-subtitle { text-align: center; color: #666; margin-bottom: 40px; }
+        .calculator-section { padding: 80px 0; background: linear-gradient(135deg, #f8f9fa 0%, #e8f1f5 100%); }
+        .calculator-container { background: white; padding: 50px; border-radius: 12px; max-width: 700px; margin: 0 auto; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .calc-group { margin-bottom: 30px; }
+        .calc-group label { display: block; margin-bottom: 12px; font-weight: 600; color: #134252; font-size: 16px; }
+        .calc-group input, .calc-group select { width: 100%; padding: 14px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 16px; transition: border-color 0.3s; }
+        .calc-group input:focus, .calc-group select:focus { outline: none; border-color: #2180CD; box-shadow: 0 0 0 3px rgba(33,128,205,0.1); }
+        .repair-types { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-bottom: 30px; }
+        .repair-option { padding: 20px; border: 2px solid #e0e0e0; border-radius: 8px; text-align: center; cursor: pointer; transition: all 0.3s; background: white; }
+        .repair-option:hover { border-color: #2180CD; background: #f0f8ff; }
+        .repair-option input[type="radio"] { display: none; }
+        .option-text { font-weight: 600; margin-bottom: 8px; color: #134252; }
+        .option-price { font-size: 12px; color: #5E5240; margin-top: 5px; }
+        .calc-result { background: #f0f8ff; padding: 30px; border-radius: 12px; margin-bottom: 30px; border-left: 4px solid #2180CD; display: none; animation: slideIn 0.3s ease; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .calc-result.active { display: block; }
+        .result-label { color: #5E5240; font-size: 14px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .result-value { font-size: 36px; font-weight: 700; color: #2180CD; margin-bottom: 8px; }
+        .result-note { font-size: 12px; color: #999; font-style: italic; }
+        .calc-btn { width: 100%; padding: 16px; background: #2180CD; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+        .calc-btn:hover { background: #1565a3; transform: translateY(-2px); box-shadow: 0 4px 15px rgba(33,128,205,0.3); }
+        footer { background: #1a1a1a; color: white; padding: 40px 0; text-align: center; margin-top: 60px; }
+        @media (max-width: 768px) { .calculator-container { padding: 30px 20px; } .repair-types { grid-template-columns: 1fr; } .result-value { font-size: 28px; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">🏠 РемонтПро</div>
+        </div>
+    </header>
+
+    <section class="calculator-section" id="calculator">
+        <div class="container">
+            <h2 class="section-title">💰 Рассчитать стоимость ремонта</h2>
+            <p class="section-subtitle">Введите параметры вашей квартиры для быстрого расчета</p>
+            <div class="calculator-container">
+                <div class="calc-group">
+                    <label>Выберите тип ремонта:</label>
+                    <div class="repair-types">
+                        <div class="repair-option">
+                            <input type="radio" name="repair_type" id="cosmetic" value="cosmetic" onchange="calculateCost()">
+                            <div class="option-text">💄 Косметический</div>
+                            <div class="option-price">500-1 500 ₽/м²</div>
+                        </div>
+                        <div class="repair-option">
+                            <input type="radio" name="repair_type" id="capital" value="capital" onchange="calculateCost()">
+                            <div class="option-text">🔧 Капитальный</div>
+                            <div class="option-price">1 500-3 500 ₽/м²</div>
+                        </div>
+                        <div class="repair-option">
+                            <input type="radio" name="repair_type" id="luxury" value="luxury" onchange="calculateCost()">
+                            <div class="option-text">✨ Люкс</div>
+                            <div class="option-price">3 500+ ₽/м²</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calc-group">
+                    <label for="area">Площадь квартиры (м²):</label>
+                    <input type="number" id="area" min="10" max="500" placeholder="Введите площадь вашей квартиры" onchange="calculateCost()" oninput="calculateCost()">
+                </div>
+
+                <div class="calc-result" id="result">
+                    <div class="result-label">Ориентировочная стоимость:</div>
+                    <div class="result-value" id="costValue">0 ₽</div>
+                    <div class="result-note">*Финальная стоимость рассчитывается после замера на объекте</div>
+                </div>
+
+                <button class="calc-btn" onclick="contactUs()">📞 Получить точную смету</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>📍 г. Москва | 📞 +7 (777) 529-05-0 | 💬 @mpood01</p>
+        <p>⏱️ Среднее время ответа: 5-10 минут</p>
+        <p>© 2026 РемонтПро. Все права защищены.</p>
+    </footer>
+
+    <script>
+        const repairPrices = {
+            cosmetic: { min: 500, max: 1500 },
+            capital: { min: 1500, max: 3500 },
+            luxury: { min: 3500, max: 8000 }
+        };
+
+        function calculateCost() {
+            const repairType = document.querySelector('input[name="repair_type"]:checked')?.value;
+            const area = parseFloat(document.getElementById('area').value) || 0;
+
+            if (!repairType || area <= 0) {
+                document.getElementById('result').classList.remove('active');
+                return;
+            }
+
+            const prices = repairPrices[repairType];
+            const minCost = prices.min * area;
+            const maxCost = prices.max * area;
+            const avgCost = Math.round((minCost + maxCost) / 2);
+
+            document.getElementById('costValue').textContent = 
+                `${avgCost.toLocaleString('ru-RU')} ₽`;
+            document.getElementById('result').classList.add('active');
+        }
+
+        function contactUs() {
+            const repairType = document.querySelector('input[name="repair_type"]:checked')?.value;
+            const area = document.getElementById('area').value;
+
+            if (!repairType || !area) {
+                alert('Пожалуйста, выберите тип ремонта и площадь');
+                return;
+            }
+
+            const typeName = {
+                cosmetic: 'Косметический',
+                capital: 'Капитальный',
+                luxury: 'Люкс'
+            }[repairType];
+
+            const message = `Хотел бы узнать точную смету. Тип ремонта: ${typeName}, площадь: ${area} м²`;
+            window.open(`tg://resolve?domain=mpood01&start=${encodeURIComponent(message)}`);
+        }
+    </script>
+</body>
+</html>

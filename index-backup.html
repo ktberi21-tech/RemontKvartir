@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Профессиональный ремонт квартир под ключ. От косметики до люкса. Гарантия 2 года. Более 100 завершённых проектов.">
+    <meta name="keywords" content="ремонт квартир, ремонт под ключ, отделка, бригада мастеров, ремонт Москва">
+    <meta name="author" content="Компания по ремонту квартир">
+    <meta name="theme-color" content="#2180CD">
+    
+    <!-- Open Graph для соц. сетей -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yoursite.ru/">
+    <meta property="og:title" content="Ремонт квартир под ключ с гарантией">
+    <meta property="og:description" content="От бюджетного до люкс ремонта. Опыт 10+ лет. 100+ проектов. Гарантия 2 года.">
+    <meta property="og:image" content="https://yoursite.ru/images/og-image.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ремонт квартир под ключ">
+    <meta name="twitter:description" content="Профессиональный ремонт квартир с гарантией качества">
+    
+    <title>Ремонт квартир под ключ - Профессиональные услуги</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Ремонт квартир под ключ",
+      "description": "Профессиональные услуги по ремонту и отделке квартир",
+      "url": "https://yoursite.ru",
+      "telephone": "+7 (XXX) XXX-XX-XX",
+      "email": "info@yoursite.ru",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Москва",
+        "addressCountry": "RU"
+      },
+      "priceRange": "$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "120"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Навигация -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="container navbar__content">
+                <div class="navbar__logo">
+                    <img src="images/logo.svg" alt="Logo" class="logo">
+                    <span class="company-name">Ремонт 24/7</span>
+                </div>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="navbar__menu" id="navbarMenu">
+                    <li><a href="#about" class="navbar__link">О нас</a></li>
+                    <li><a href="#services" class="navbar__link">Услуги</a></li>
+                    <li><a href="#portfolio" class="navbar__link">Примеры работ</a></li>
+                    <li><a href="#testimonials" class="navbar__link">Отзывы</a></li>
+                    <li><a href="#team" class="navbar__link">Команда</a></li>
+                    <li><a href="#contacts" class="navbar__link">Контакты</a></li>
+                </ul>
+                
+                <button class="btn btn--primary navbar__cta" id="headerCTA">
+                    Написать в Telegram
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Героя секция -->
+    <section class="hero" id="hero">
+        <div class="hero__content">
+            <h1 class="hero__title">Ремонт квартир под ключ с гарантией качества</h1>
+            <p class="hero__subtitle">От бюджетного ремонта до люкс-отделки. Мы адаптируем работы под ваш бюджет и сроки</p>
+            <div class="hero__buttons">
+                <button class="btn btn--primary btn--lg" id="heroCTA">Обсудить проект в Telegram</button>
+                <a href="#portfolio" class="btn btn--outline btn--lg">Посмотреть примеры работ</a>
+            </div>
+        </div>
+        <div class="hero__image">
+            <img src="images/hero/main.jpg" alt="Красиво отремонтированная квартира" loading="lazy">
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section__title">О нас / Почему мы?</h2>
+            <p class="section__subtitle">Компания с опытом, репутацией и результатами</p>
+            
+            <div class="about__grid">
+                <div class="about__card">
+                    <div class="about__icon">🏆</div>
+                    <h3>Опыт 10+ лет на рынке</h3>
+                    <p>Проверенная компания, а не стартап. Сотни благодарных клиентов за спиной.</p>
+                </div>
+                <div class="about__card">
+                    <div class="about__icon">✅</div>
+                    <h3>100+ завершённых проектов</h3>
+                    <p>Каждый проект — на нашем сайте. Видите реальные результаты нашей работы.</p>
+                </div>
+                <div class="about__card">
+                    <div class="about__icon">⏰</div>
+                    <h3>Соблюдение сроков на 99%</h3>
+                    <p>Всё готово в срок. Мы ценим ваше время и планы на переезд.</p>
+                </div>
+                <div class="about__card">
+                    <div class="about__icon">💰</div>
+                    <h3>Гибкое ценообразование</h3>
+                    <p>От эконома до премиума. Нет минимальной сметы. Работаем с любым бюджетом.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section__title">Наши услуги</h2>
+            <p class="section__subtitle">Три типа ремонта на любой бюджет</p>
+            
+            <div class="services__grid">
+                <!-- Косметический ремонт -->
+                <div class="service__card">
+                    <div class="service__header">
+                        <h3>Косметический ремонт</h3>
+                        <span class="service__badge">Бюджетный</span>
+                    </div>
+                    <p class="service__description">Быстрое обновление интерьера без масштабных работ</p>
+                    <ul class="service__list">
+                        <li>✓ Покраска стен и потолков</li>
+                        <li>✓ Замена обоев</li>
+                        <li>✓ Новые напольные покрытия</li>
+                        <li>✓ Косметический ремонт сантехники</li>
+                    </ul>
+                    <div class="service__price">
+                        <span>от 500 до 1 500 руб./м²</span>
+                        <span>4-6 недель</span>
+                    </div>
+                    <button class="btn btn--primary btn--full-width service__cta">Узнать подробнее</button>
+                </div>
+
+                <!-- Среднее выполнение -->
+                <div class="service__card service__card--featured">
+                    <div class="service__header">
+                        <h3>Среднее выполнение</h3>
+                        <span class="service__badge service__badge--popular">Популярный</span>
+                    </div>
+                    <p class="service__description">Качественный ремонт с заменой коммуникаций</p>
+                    <ul class="service__list">
+                        <li>✓ Полный демонтаж</li>
+                        <li>✓ Замена электропроводки и водопровода</li>
+                        <li>✓ Новая отделка стен и полов</li>
+                        <li>✓ Косметический ремонт потолков</li>
+                    </ul>
+                    <div class="service__price">
+                        <span>от 1 500 до 3 500 руб./м²</span>
+                        <span>8-12 недель</span>
+                    </div>
+                    <button class="btn btn--primary btn--full-width service__cta">Узнать подробнее</button>
+                </div>
+
+                <!-- Люкс ремонт -->
+                <div class="service__card">
+                    <div class="service__header">
+                        <h3>Люкс / Премиум</h3>
+                        <span class="service__badge">Премиум</span>
+                    </div>
+                    <p class="service__description">Полная перепланировка и дизайнерская отделка</p>
+                    <ul class="service__list">
+                        <li>✓ Дизайн-проект включён</li>
+                        <li>✓ Все инженерные системы</li>
+                        <li>✓ Премиум-материалы</li>
+                        <li>✓ Авторский надзор</li>
+                    </ul>
+                    <div class="service__price">
+                        <span>от 3 500 руб./м² и выше</span>
+                        <span>по согласованию</span>
+                    </div>
+                    <button class="btn btn--primary btn--full-width service__cta">Обсудить проект</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея примеров работ -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section__title">Примеры наших работ</h2>
+            <p class="section__subtitle">Более 100 завершённых проектов</p>
+            
+            <!-- Фильтры -->
+            <div class="portfolio__filters">
+                <button class="filter-btn active" data-filter="all">Все работы</button>
+                <button class="filter-btn" data-filter="cosmetic">Косметический</button>
+                <button class="filter-btn" data-filter="medium">Среднее</button>
+                <button class="filter-btn" data-filter="premium">Люкс</button>
+            </div>
+            
+            <!-- Галерея -->
+            <div class="gallery" id="gallery">
+                <div class="gallery__item" data-category="cosmetic">
+                    <img src="images/portfolio/1.jpg" alt="Косметический ремонт спальни" loading="lazy">
+                    <div class="gallery__overlay">
+                        <h4>Спальня в хрущёвке</h4>
+                        <p>Косметический ремонт</p>
+                    </div>
+                </div>
+                <div class="gallery__item" data-category="medium">
+                    <img src="images/portfolio/2.jpg" alt="Среднее выполнение - кухня" loading="lazy">
+                    <div class="gallery__overlay">
+                        <h4>Кухня-гостиная</h4>
+                        <p>Среднее выполнение</p>
+                    </div>
+                </div>
+                <div class="gallery__item bathroom-carousel" data-category="premium">
+                    <div class="carousel-container">
+                        <img class="carousel-img" src="images/bathroom/bathroom-1.jpg" alt="Ванная люкс - фото 1" loading="lazy">
+                        <img class="carousel-img hidden" src="images/bathroom/bathroom-2.jpg" alt="Ванная люкс - фото 2" loading="lazy">
+                        <img class="carousel-img hidden" src="images/bathroom/bathroom-3.jpg" alt="Ванная люкс - фото 3" loading="lazy">
+                        <img class="carousel-img hidden" src="images/bathroom/bathroom-4.jpg" alt="Ванная люкс - фото 4" loading="lazy">
+                        <img class="carousel-img hidden" src="images/bathroom/bathroom-5.jpg" alt="Ванная люкс - фото 5" loading="lazy">
+                        <button class="carousel-prev">❮</button>
+                        <button class="carousel-next">❯</button>
+                    </div>
+                    <div class="gallery__overlay">
+                        <h4>Ванная комната люкс</h4>
+                        <p>Премиум отделка</p>
+                    </div>
+                    <div class="gallery__overlay">
+                        <h4>Ванная комната люкс</h4>
+                        <p>Премиум отделка</p>
+                    </div>
+                </div>
+                <!-- Добавьте больше элементов галереи -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Наши проекты (Featured Projects) -->
+    <section class="featured-projects" id="featured">
+        <div class="container">
+            <h2 class="section__title">Наши лучшие проекты</h2>
+            
+            <div class="project">
+                <div class="project__image">
+                    <img src="images/portfolio/project1.jpg" alt="Полная отделка квартиры 85 м²" loading="lazy">
+                </div>
+                <div class="project__content">
+                    <h3>Полная отделка квартиры 85 м² в ЖК Престиж</h3>
+                    <p>Полная переделка квартиры с заменой всех инженерных систем. Демонтаж несущей стены (с разрешением), новая электропроводка, водопровод, отопление.</p>
+                    <div class="project__params">
+                        <span>📐 Площадь: 85 м²</span>
+                        <span>⏱ Сроки: 12 недель</span>
+                        <span>💰 Бюджет: 850 000 руб.</span>
+                    </div>
+                    <p class="project__quote">
+                        <strong>Отзыв клиента:</strong> "Результат превзошёл все ожидания! Квартира выглядит как дизайнерский проект. Спасибо за внимание к деталям!"
+                    </p>
+                    <button class="btn btn--primary project__cta">Узнать о подобном проекте</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы клиентов -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section__title">Отзывы наших клиентов</h2>
+            <p class="section__subtitle">Что говорят люди, которые доверили нам ремонт</p>
+            
+            <div class="testimonials__slider" id="testimonialSlider">
+                <div class="testimonial__card">
+                    <div class="testimonial__header">
+                        <img src="images/testimonials/1.jpg" alt="Мария К." class="testimonial__avatar">
+                        <div class="testimonial__info">
+                            <h4>Мария К.</h4>
+                            <p>Ремонт спальни и гостиной</p>
+                        </div>
+                        <div class="testimonial__rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="testimonial__text">
+                        "Искали нормальную бригаду год. Наконец-то нашли! Сделали ремонт в спальне быстро, аккуратно и без переделок. Результат потрясающий. Спасибо мастерам за внимание и профессионализм!"
+                    </p>
+                    <p class="testimonial__date">Январь 2024</p>
+                </div>
+
+                <div class="testimonial__card">
+                    <div class="testimonial__header">
+                        <img src="images/testimonials/2.jpg" alt="Иван П." class="testimonial__avatar">
+                        <div class="testimonial__info">
+                            <h4>Иван П.</h4>
+                            <p>Косметический ремонт кухни</p>
+                        </div>
+                        <div class="testimonial__rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="testimonial__text">
+                        "Обращались за косметическим ремонтом, в итоге результат превзошел ожидания. Всё четко по срокам, без задержек. Материалы качественные, работа аккуратная. Рекомендуем!"
+                    </p>
+                    <p class="testimonial__date">Декабрь 2023</p>
+                </div>
+
+                <div class="testimonial__card">
+                    <div class="testimonial__header">
+                        <img src="images/testimonials/3.jpg" alt="Алексей Ш." class="testimonial__avatar">
+                        <div class="testimonial__info">
+                            <h4>Алексей Ш.</h4>
+                            <p>Люкс ремонт трёхкомнатной квартиры</p>
+                        </div>
+                        <div class="testimonial__rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="testimonial__text">
+                        "Людей с хорошей репутацией найти сложно. Эти ребята — исключение. Честные, ответственные, качественно работают. Не будут вас обманывать и доделивать. Советую всем!"
+                    </p>
+                    <p class="testimonial__date">Ноябрь 2023</p>
+                </div>
+            </div>
+            
+            <div class="slider__controls">
+                <button class="slider__btn slider__btn--prev" id="prevTestimonial">❮</button>
+                <button class="slider__btn slider__btn--next" id="nextTestimonial">❯</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Процесс работы -->
+    <section class="process" id="process">
+        <div class="container">
+            <h2 class="section__title">Как мы работаем</h2>
+            <p class="section__subtitle">Прозрачный процесс от первого контакта до сдачи</p>
+            
+            <div class="process__timeline">
+                <div class="process__step">
+                    <div class="process__number">1</div>
+                    <h3>Консультация и смета</h3>
+                    <p>Вы пишете нам в Telegram, описываете проект, мы расчитываем смету и отправляем её в течение часа.</p>
+                </div>
+                <div class="process__step">
+                    <div class="process__number">2</div>
+                    <h3>Подготовка проекта</h3>
+                    <p>Согласуем дизайн, материалы, сроки и бюджет. Подписываем договор с подробным описанием работ.</p>
+                </div>
+                <div class="process__step">
+                    <div class="process__number">3</div>
+                    <h3>Подготовка помещения</h3>
+                    <p>Защита мебели, демонтаж старых покрытий, подготовка поверхностей. Всё аккуратно и по плану.</p>
+                </div>
+                <div class="process__step">
+                    <div class="process__number">4</div>
+                    <h3>Основные работы</h3>
+                    <p>Проведение коммуникаций, отделка стен, укладка полов, установка новых элементов и сантехники.</p>
+                </div>
+                <div class="process__step">
+                    <div class="process__number">5</div>
+                    <h3>Финишная отделка</h3>
+                    <p>Покраска, укладка плитки, монтаж дверей, плинтусов и всех элементов декора. Финальная уборка.</p>
+                </div>
+                <div class="process__step">
+                    <div class="process__number">6</div>
+                    <h3>Сдача и гарантия</h3>
+                    <p>Финальная проверка качества, подписание акта. Гарантийное обслуживание 2 года.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Почему выбирают нас -->
+    <section class="why-us" id="why-us">
+        <div class="container">
+            <h2 class="section__title">Почему выбирают нас?</h2>
+            <p class="section__subtitle">Убедительные доводы для сотрудничества</p>
+            
+            <div class="why-us__grid">
+                <div class="why-us__card">
+                    <div class="why-us__icon">💰</div>
+                    <h3>Прозрачное ценообразование</h3>
+                    <p>Точная смета ДО начала работ. Нет неожиданных расходов и доплат. Всё честно.</p>
+                </div>
+                <div class="why-us__card">
+                    <div class="why-us__icon">📋</div>
+                    <h3>Опытная команда</h3>
+                    <p>10+ лет на рынке. Не стартап. За нами — сотни успешных проектов.</p>
+                </div>
+                <div class="why-us__card">
+                    <div class="why-us__icon">✓</div>
+                    <h3>Лицензии и сертификаты</h3>
+                    <p>Каждый сотрудник прошел обучение и имеет документы. Качество гарантировано.</p>
+                </div>
+                <div class="why-us__card">
+                    <div class="why-us__icon">🎯</div>
+                    <h3>Гибкость по бюджету</h3>
+                    <p>От эконома до премиума. Нет минимальной сметы. Работаем с любым бюджетом.</p>
+                </div>
+                <div class="why-us__card">
+                    <div class="why-us__icon">🛡️</div>
+                    <h3>Гарантия 2 года</h3>
+                    <p>Если возникнет проблема — мы бесплатно исправим. Спокойствие гарантировано.</p>
+                </div>
+                <div class="why-us__card">
+                    <div class="why-us__icon">👀</div>
+                    <h3>Контроль качества</h3>
+                    <p>Ежедневные проверки, фотоотчеты, согласование с клиентом на каждом этапе.</p>
+                </div>
+                <div class="why-us__card">
+                    <div class="why-us__icon">💬</div>
+                    <h3>Быстрая поддержка</h3>
+                    <p>Ответим в Telegram за 5 минут. Менеджер всегда на связи и готов помочь.</p>
+                </div>
+                <div class="why-us__card">
+                    <div class="why-us__icon">♻️</div>
+                    <h3>Экологичные материалы</h3>
+                    <p>Только сертифицированные материалы с документами качества. Ваше здоровье в приоритете.</p>
+                </div>
+            </div>
+
+            <!-- Социальное доказательство -->
+            <div class="trust-signals">
+                <div class="trust-signal">
+                    <div class="trust-signal__number">100+</div>
+                    <p>Проектов успешно завершено</p>
+                </div>
+                <div class="trust-signal">
+                    <div class="trust-signal__number">98%</div>
+                    <p>Клиентов рекомендуют нас</p>
+                </div>
+                <div class="trust-signal">
+                    <div class="trust-signal__number">4.9★</div>
+                    <p>Средняя оценка (200+ отзывов)</p>
+                </div>
+                <div class="trust-signal">
+                    <div class="trust-signal__number">10+</div>
+                    <p>Лет на рынке</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Наша команда -->
+    <section class="team" id="team">
+        <div class="container">
+            <h2 class="section__title">Наша команда</h2>
+            <p class="section__subtitle">Профессионалы своего дела, которым можно доверять</p>
+            
+            <div class="team__grid">
+                <div class="team__member">
+                    <img src="images/team/1.jpg" alt="Сергей Петров - Бригадир" class="team__photo">
+                    <h3>Сергей Петров</h3>
+                    <p class="team__role">Бригадир и главный мастер</p>
+                    <p class="team__experience">15 лет опыта</p>
+                    <p class="team__bio">Сергей возглавляет нашу команду. Профессионал с большой буквы, знающий все нюансы ремонта. Лично проверяет качество каждого проекта.</p>
+                    <div class="team__badges">
+                        <span class="badge">✓ Сертифицирован</span>
+                        <span class="badge">150+ проектов</span>
+                    </div>
+                </div>
+
+                <div class="team__member">
+                    <img src="images/team/2.jpg" alt="Александр Козлов - Мастер-отделочник" class="team__photo">
+                    <h3>Александр Козлов</h3>
+                    <p class="team__role">Мастер-отделочник</p>
+                    <p class="team__experience">12 лет опыта</p>
+                    <p class="team__bio">Король отделки. Натяжные потолки, декоративная штукатурка, дизайнерская покраска. Результаты всегда потрясающего качества.</p>
+                    <div class="team__badges">
+                        <span class="badge">✓ Сертифицирован</span>
+                        <span class="badge">130+ проектов</span>
+                    </div>
+                </div>
+
+                <div class="team__member">
+                    <img src="images/team/3.jpg" alt="Иван Соколов - Электромонтер" class="team__photo">
+                    <h3>Иван Соколов</h3>
+                    <p class="team__role">Электромонтер и сантехник</p>
+                    <p class="team__experience">14 лет опыта</p>
+                    <p class="team__bio">Все инженерные системы. Электропроводка, водопровод, вентиляция — всё безопасно и надёжно. Сертифицирован и застрахован.</p>
+                    <div class="team__badges">
+                        <span class="badge">✓ Лицензирован</span>
+                        <span class="badge">140+ проектов</span>
+                    </div>
+                </div>
+
+                <div class="team__member">
+                    <img src="images/team/4.jpg" alt="Анастасия Волкова - Дизайнер" class="team__photo">
+                    <h3>Анастасия Волкова</h3>
+                    <p class="team__role">Дизайнер-консультант</p>
+                    <p class="team__experience">8 лет опыта</p>
+                    <p class="team__bio">Помогает выбрать правильные материалы и стиль. Её идеи воплощаются в жизнь красиво и функционально. Слушает клиента.</p>
+                    <div class="team__badges">
+                        <span class="badge">✓ Сертифицирован</span>
+                        <span class="badge">100+ проектов</span>
+                    </div>
+                </div>
+
+                <div class="team__member">
+                    <img src="images/team/5.jpg" alt="Дмитрий Мартынов - Плиточник" class="team__photo">
+                    <h3>Дмитрий Мартынов</h3>
+                    <p class="team__role">Плиточник и мозаичник</p>
+                    <p class="team__experience">11 лет опыта</p>
+                    <p class="team__bio">Работает с плиткой как художник. Идеально ровные швы, сложные узоры, мозаика. Ванные комнаты выглядят как произведения искусства.</p>
+                    <div class="team__badges">
+                        <span class="badge">✓ Сертифицирован</span>
+                        <span class="badge">120+ проектов</span>
+                    </div>
+                </div>
+
+                <div class="team__member">
+                    <img src="images/team/6.jpg" alt="Юрий Смирнов - Менеджер" class="team__photo">
+                    <h3>Юрий Смирнов</h3>
+                    <p class="team__role">Координатор проектов</p>
+                    <p class="team__experience">9 лет опыта</p>
+                    <p class="team__bio">Следит за тем, чтобы всё шло по плану. Синхронизирует работу всех бригад, следит за сроками и бюджетом. Проекты сдаются точно в срок.</p>
+                    <div class="team__badges">
+                        <span class="badge">✓ Сертифицирован</span>
+                        <span class="badge">110+ проектов</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team__footer">
+                <p>Мы постоянно совершенствуемся. Команда регулярно проходит переподготовку, следит за новыми трендами в ремонте и отделке. Используем современное оборудование. Все работают по единым стандартам качества компании.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Почему выбирают нас - Trust Signals -->
+    <section class="trust-section" id="trust">
+        <div class="container">
+            <h2 class="section__title">Факты, которые говорят сами за себя</h2>
+            
+            <div class="trust-factors">
+                <div class="trust-factor">
+                    <h4>📜 Договор с полным описанием работ</h4>
+                    <p>Юридическая защита для обеих сторон. Вы знаете точно, что получите.</p>
+                </div>
+                <div class="trust-factor">
+                    <h4>💳 Поэтапные платежи</h4>
+                    <p>Вы платите по мере выполнения работ, не авансом. Безопасно для вас.</p>
+                </div>
+                <div class="trust-factor">
+                    <h4>🆓 Смета рассчитывается бесплатно</h4>
+                    <p>Нет обязательств. Без давления. Просто консультация и расчет.</p>
+                </div>
+                <div class="trust-factor">
+                    <h4>👁️ Авторский надзор</h4>
+                    <p>Наш специалист следит за качеством до конца проекта. Ничего не будет упущено.</p>
+                </div>
+                <div class="trust-factor">
+                    <h4>🛠️ Гарантийное обслуживание</h4>
+                    <p>Если что-то сломалось в течение 2 лет — мы отремонтируем бесплатно.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA и Контакты -->
+    <section class="cta" id="contacts">
+        <div class="container">
+            <h2 class="section__title">Готовы начать ремонт своей мечты?</h2>
+            <p class="section__subtitle">Свяжитесь с нами прямо сейчас. Мы бесплатно проконсультируем и расчитаем смету.</p>
+            
+            <div class="cta__buttons">
+                <button class="btn btn--primary btn--lg" id="ctaButtonTelegram">
+                    📱 Написать в Telegram
+                </button>
+                <a href="tel:+79991234567" class="btn btn--outline btn--lg">
+                    ☎️ Позвонить: +7 (999) 123-45-67
+                </a>
+            </div>
+            
+            <p class="cta__note">⏱️ Среднее время ответа: 5-10 минут</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>Email:</strong>
+                    <a href="mailto:info@yoursite.ru">info@yoursite.ru</a>
+                </div>
+                <div class="contact-item">
+                    <strong>Telegram:</strong>
+                    <a href="https://t.me/your_username" target="_blank">@your_username</a>
+                </div>
+                <div class="contact-item">
+                    <strong>Адрес:</strong>
+                    <p>г. Москва, ул. Примерная, д. 1</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h4>О компании</h4>
+                    <ul>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#team">Наша команда</a></li>
+                        <li><a href="#portfolio">Портфолио</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4>Услуги</h4>
+                    <ul>
+                        <li><a href="#services">Все услуги</a></li>
+                        <li><a href="#services">Косметический ремонт</a></li>
+                        <li><a href="#services">Люкс ремонт</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><a href="tel:+79991234567">+7 (999) 123-45-67</a></li>
+                        <li><a href="https://t.me/your_username">Telegram</a></li>
+                        <li><a href="mailto:info@yoursite.ru">Email</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4>Соцсети</h4>
+                    <div class="social-links">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a href="https://vk.com" target="_blank" rel="noopener noreferrer">ВКонтакте</a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2024 Ремонт квартир под ключ. Все права защищены.</p>
+                <div class="footer__links">
+                    <a href="#privacy">Политика конфиденциальности</a>
+                    <a href="#terms">Условия использования</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка Наверх -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Вернуться в начало">↑</button>
+
+    <!-- Модальное окно галереи --> 
+    <div class="modal" id="galleryModal">
+        <span class="modal__close">&times;</span>
+        <img class="modal__image" alt="">
+        <div class="modal__info">
+            <h4 class="modal__title"></h4>
+            <p class="modal__description"></p>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="gallery.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script> 
+    <script src="js/mobile-menu.js"></script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || []; 
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</body>
+    
+    <!-- Yandex.Metrika -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        ym(XXXXXXXXX, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/XXXXXXXXX" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+</body>
+</html>
